@@ -1,0 +1,39 @@
+			The great plan
+
+1. MAP
+	Take info of each map from the file ( could be n files)
+		Store for what is   ∗ The number of lines on the map;
+							∗ The "empty" character;
+							∗ The "obstacle" character;
+							∗ The "full" character.
+		Check for error
+	Definition of a valid map :
+◦ All lines must have the same length.
+◦ There’s at least one line of at least one box.
+◦ At each end of line, there’s a line break.
+◦ The characters on the map can only be those introduced in the first line.
+◦ The map is invalid if a character is missing from the first line, or if two characters (of empty, full and obstacle) are identical.
+◦ The characters can be any printable character, even numbers.
+◦ In case of an invalid map, your program should display map error on the error
+output followed by a line break. Your program will then move on to the next
+map.
+
+
+
+2.SOLVE
+	Algorithmen to solve the map
+		 choose to represent the
+square that’s closest to the top of the map, then the one that’s most to the
+left
+		Brute-force : 
+	BSQ = 0;
+		- Check for every line and row the square
+		 - Take 1 postion and move to right, down , diagnol, 
+		 	+ NO obstacle : move to the next 3 new point ( check again)
+		
+			+ YES obstacle : backtrack the previous point and compare with BSQ, if bigger change.
+
+		Check diagonal :
+			move n times diagnol and check up and left n times for obstacle
+3.PRINT
+	Display the solved map
